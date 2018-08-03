@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GC_MT_1v2"
         mc:Ignorable="d"
-        Title="{Binding Source={x:Static local:WindowHeader.Instance}, Path=Header}" Height="450" Width="800">
+        Title="{Binding Source={x:Static local:WindowHeader.Instance}, Path=Header}" Height="720" Width="1080">
 
-    <Button Name="button" Click="button_Click">Click Me!</Button>
-    
+    <Grid>
+
+        <Button Name="button" Click="button_Click">Click Me!</Button>
+
+    </Grid>
+
 </Window>
