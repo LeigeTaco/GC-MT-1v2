@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GC_MT_1v2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="{Binding Source={x:Static local:WindowHeader.Instance}, Path=Header}" Height="450" Width="800">
+
+    <Button Name="button" Click="button_Click">Click Me!</Button>
+    
 </Window>

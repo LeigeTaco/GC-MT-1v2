@@ -20,9 +20,57 @@ namespace GC_MT_1v2
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
+
+            string temp = "What about the Droid attack on the Wookies?";        //Streamreader to here.
             InitializeComponent();
+            WindowHeader.Instance.Header = temp;
+
+        }
+
+        void button_Click(object sender, RoutedEventArgs e)
+        {
+            // Show message box when button is clicked
+            MessageBox.Show("He's right, it's a system we can't afford to lose.");
+
+        }
+
+    }
+
+    public class Program
+    {
+
+        public static void OpenConsole()
+        {
+
+            Console.ReadLine();
+
+        }
+
+    }
+
+    public class WindowHeader : DependencyObject
+    {
+        public static readonly DependencyProperty HeaderProperty =
+            DependencyProperty.Register("Header", typeof(string),
+            typeof(WindowHeader), new UIPropertyMetadata("My App v2.5"));
+        /// <summary>
+        /// Sets the header message for the Datawindow
+        /// </summary>
+        public string Header
+        {
+            get { return (string)GetValue(HeaderProperty); }
+            set { SetValue(HeaderProperty, value); }
+        }
+
+        public static WindowHeader Instance { get; private set; }
+
+        static WindowHeader()
+        {
+            Instance = new WindowHeader();
         }
     }
+
 }
